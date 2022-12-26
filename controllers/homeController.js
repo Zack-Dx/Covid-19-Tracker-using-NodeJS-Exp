@@ -4,8 +4,10 @@ class homeController {
         res.render('index', { response: response.data.regional });
     }
 }
-function fetchData() {
+async function fetchData() {
     const url = 'https://api.rootnet.in/covid19-in/stats/latest';
-    return fetch(url).then((res) => res.json());
+    const data = await fetch(url);
+    const res = await data.json();
+    return res;
 }
 module.exports = { homeController };
