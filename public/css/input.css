@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+nav li a:hover {
+    color: aqua;
+    transition: all 0.3s;
+}

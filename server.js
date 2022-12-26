@@ -3,12 +3,14 @@ const express = require('express');
 const path = require('path');
 const router = express.Router();
 const { initRoutes } = require('./routes/web.js');
+const expressLayouts = require('express-ejs-layouts');
 const app = express();
 const port = process.env.PORT;
 
 //Middlewares
 app.use(express.static('public'));
 app.set('view engine', 'ejs');
+app.use(expressLayouts);
 app.set('views', path.join(__dirname, '/src/views'));
 app.use(router);
 
