@@ -18,21 +18,43 @@
         <table class="w-full table-auto bg-white">
             <thead>
                 <tr class="text-xl bg-gray-800">
-                    <th class="mx-4 py-2 text-center text-green-500">Country</th>
+                    <th class="mx-4 py-2 text-center text-green-500">States</th>
+                    <th class="mx-4 py-2 text-center text-sky-400">Indian</th>
+                    <th class="mx-4 py-2 text-center text-white">Foreign</th>
                     <th class="mx-4 py-2 text-center text-purple-400">Recovered</th>
                     <th class="mx-4 py-2 text-center text-red-400">Deaths</th>
-                    <th class="mx-4 py-2 text-center text-yellow-500">Today</th>
+                    <th class="mx-4 py-2 text-center text-yellow-500">Total Cases</th>
                 </tr>
             </thead>
             <tbody>
-                <tr class="font-bold">
-                    <td class="px-4 py-2 text-center border">Hello</td>
-                    <td class="px-4 py-2 text-center border">Hello</td>
-                    <td class="px-4 py-2 text-center border">Hello</td>
-                    <td class="px-4 py-2 text-center border">Hello</td>
 
-                </tr>
+                <% for (let i in response) { %>
+                    <tr class="font-bold">
+                        <td class="px-4 py-2 text-center border">
+                            <%= response[i].loc %>
+                        </td>
+                        <td class="px-4 py-2 text-center border">
+                            <%= response[i].confirmedCasesIndian %>
+                        </td>
+                        <td class="px-4 py-2 text-center border">
+                            <%= response[i].confirmedCasesForeign %>
+                        </td>
+                        <td class="px-4 py-2 text-center border">
+                            <%=response[i].discharged%>
+                        </td>
+                        <td class="px-4 py-2 text-center border">
+                            <%=response[i].deaths%>
+                        </td>
+                        <td class="px-4 py-2 text-center border">
+                            <%=response[i].totalConfirmed%>
+                        </td>
+
+                    </tr>
+                    <% } %>
+
+
             </tbody>
         </table>
     </div>
+
 </section>
