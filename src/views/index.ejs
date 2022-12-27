@@ -9,18 +9,18 @@
         </div>
     </div>
     <!-- Table -->
-    <div class="py-10 ">
+    <div class="py-4 ">
         <h1 class="uppercase text-center font-bold text-4xl text-sky-600">COVID-<span class="text-black">19
             </span>Realtime Data
         </h1>
     </div>
-    <div class="container mx-auto p-2">
+    <div class="container mx-auto p-12">
         <table class="w-full table-auto bg-white">
             <thead>
                 <tr class="text-xl bg-gray-800">
                     <th class="mx-4 py-2 text-center text-green-500">States</th>
-                    <th class="mx-4 py-2 text-center text-sky-400">Indian</th>
-                    <th class="mx-4 py-2 text-center text-pink-400">Foreign</th>
+                    <th class="mx-4 py-2 text-center text-sky-400">Indians</th>
+                    <th class="mx-4 py-2 text-center text-pink-400">Foreigners</th>
                     <th class="mx-4 py-2 text-center text-purple-400">Recovered</th>
                     <th class="mx-4 py-2 text-center text-red-400">Deaths</th>
                     <th class="mx-4 py-2 text-center text-yellow-500">Total Cases</th>
@@ -30,7 +30,7 @@
 
                 <% for (let i in response) { %>
                     <tr class="font-bold">
-                        <td class="px-4 py-2 text-center border">
+                        <td class="px-4 py-2 text-left border">
                             <%= response[i].loc %>
                         </td>
                         <td class="px-4 py-2 text-center border">

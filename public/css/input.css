@@ -6,3 +6,13 @@ nav li a:hover {
     color: aqua;
     transition: all 0.3s;
 }
+@media (min-width: 250px) and (max-width: 750px) {
+    nav div {
+        flex-direction: column;
+    }
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
